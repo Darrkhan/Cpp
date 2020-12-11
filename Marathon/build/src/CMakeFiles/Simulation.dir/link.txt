@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Simulation.dir/runner.cpp.o CMakeFiles/Simulation.dir/main.cpp.o CMakeFiles/Simulation.dir/parcour.cpp.o  -o Simulation  -std=c++2a -Wall -lsfml-graphics -lsfml-window -lsfml-system 

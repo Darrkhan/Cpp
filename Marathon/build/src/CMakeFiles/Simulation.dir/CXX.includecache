@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/darrkhan/Documents/Devs/C++/Project/PJ1/src/parcour.cpp
+parcour.h
+/home/darrkhan/Documents/Devs/C++/Project/PJ1/src/parcour.h
+runner.h
+/home/darrkhan/Documents/Devs/C++/Project/PJ1/src/runner.h
+iostream
+-
+iomanip
+-
+algorithm
+-
+sstream
+-
+string
+-
+math.h
+-
+vector
+-
+
+/home/darrkhan/Documents/Devs/C++/Project/PJ1/src/parcour.h
+runner.h
+/home/darrkhan/Documents/Devs/C++/Project/PJ1/src/runner.h
+vector
+-
+iostream
+-
+
+/home/darrkhan/Documents/Devs/C++/Project/PJ1/src/runner.h
+string
+-
+
