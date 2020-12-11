@@ -1,20 +1,20 @@
-n° 1 : Lucie     temps : 02:04:56
-n° 2 : Mathieu   temps : 02:11:56
-n° 3 : Jean      temps : 02:26:32
-n° 4 : Baptiste  temps : 02:26:57
-n° 5 : Jacques   temps : 02:47:37
-n° 6 : Pierre    temps : 02:59:35
-n° 7 : Lisa      temps : 03:11:49
-n° 8 : Alexandre temps : 03:12:02
-n° 9 : Julie     temps : 03:13:33
-n°10 : Anna      temps : 03:13:46
-n°11 : Gérard    temps : 03:28:38
-n°12 : Romane    temps : 03:30:12
-n°13 : Kevin     temps : 03:31:35
-n°14 : Katty     temps : 03:49:00
-n°15 : Jasmine   temps : 04:11:47
-n°16 : Elise     temps : 04:13:49
-n°17 : Thomas    temps : 04:19:46
-n°18 : François  temps : 04:43:42
-n°19 : Paul      temps : 05:24:53
-n°20 : Charlotte temps : 06:07:11
+n° 1 : Baptiste  temps : 02:05:57
+n° 2 : Charlotte temps : 02:16:40
+n° 3 : Gérard    temps : 02:20:36
+n° 4 : Kevin     temps : 02:23:50
+n° 5 : Julie     temps : 02:28:15
+n° 6 : François  temps : 02:30:14
+n° 7 : Anna      temps : 02:37:47
+n° 8 : Jacques   temps : 02:40:18
+n° 9 : Jasmine   temps : 02:47:01
+n°10 : Lisa      temps : 02:50:19
+n°11 : Thomas    temps : 02:52:45
+n°12 : Jean      temps : 03:13:30
+n°13 : Mathieu   temps : 03:16:27
+n°14 : Romane    temps : 03:35:53
+n°15 : Pierre    temps : 03:53:33
+n°16 : Alexandre temps : 04:13:24
+n°17 : Katty     temps : 04:15:00
+n°18 : Paul      temps : 05:17:24
+n°19 : Lucie     temps : 05:21:41
+n°20 : Elise     temps : 06:10:40

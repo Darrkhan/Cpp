@@ -48,13 +48,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/darrkhan/Documents/Devs/C++/Project/PJ1
+CMAKE_SOURCE_DIR = /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/darrkhan/Documents/Devs/C++/Project/PJ1/build
+CMAKE_BINARY_DIR = /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -112,28 +124,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/darrkhan/Documents/Devs/C++/Project/PJ1/build/CMakeFiles /home/darrkhan/Documents/Devs/C++/Project/PJ1/build/src/CMakeFiles/progress.marks
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darrkhan/Documents/Devs/C++/Project/PJ1/build/CMakeFiles 0
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build/CMakeFiles /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build/src/CMakeFiles/progress.marks
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,33 +143,33 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/Simulation.dir/rule:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Simulation.dir/rule
-.PHONY : src/CMakeFiles/Simulation.dir/rule
+src/CMakeFiles/run.dir/rule:
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/run.dir/rule
+.PHONY : src/CMakeFiles/run.dir/rule
 
 # Convenience name for target.
-Simulation: src/CMakeFiles/Simulation.dir/rule
+run: src/CMakeFiles/run.dir/rule
 
-.PHONY : Simulation
+.PHONY : run
 
 # fast build rule for target.
-Simulation/fast:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/build
-.PHONY : Simulation/fast
+run/fast:
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/build
+.PHONY : run/fast
 
 main.o: main.cpp.o
 
@@ -177,7 +177,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/main.cpp.o
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -186,7 +186,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/main.cpp.i
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -195,7 +195,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/main.cpp.s
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 parcour.o: parcour.cpp.o
@@ -204,7 +204,7 @@ parcour.o: parcour.cpp.o
 
 # target to build an object file
 parcour.cpp.o:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/parcour.cpp.o
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/parcour.cpp.o
 .PHONY : parcour.cpp.o
 
 parcour.i: parcour.cpp.i
@@ -213,7 +213,7 @@ parcour.i: parcour.cpp.i
 
 # target to preprocess a source file
 parcour.cpp.i:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/parcour.cpp.i
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/parcour.cpp.i
 .PHONY : parcour.cpp.i
 
 parcour.s: parcour.cpp.s
@@ -222,7 +222,7 @@ parcour.s: parcour.cpp.s
 
 # target to generate assembly for a file
 parcour.cpp.s:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/parcour.cpp.s
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/parcour.cpp.s
 .PHONY : parcour.cpp.s
 
 runner.o: runner.cpp.o
@@ -231,7 +231,7 @@ runner.o: runner.cpp.o
 
 # target to build an object file
 runner.cpp.o:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/runner.cpp.o
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/runner.cpp.o
 .PHONY : runner.cpp.o
 
 runner.i: runner.cpp.i
@@ -240,7 +240,7 @@ runner.i: runner.cpp.i
 
 # target to preprocess a source file
 runner.cpp.i:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/runner.cpp.i
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/runner.cpp.i
 .PHONY : runner.cpp.i
 
 runner.s: runner.cpp.s
@@ -249,7 +249,7 @@ runner.s: runner.cpp.s
 
 # target to generate assembly for a file
 runner.cpp.s:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(MAKE) -f src/CMakeFiles/Simulation.dir/build.make src/CMakeFiles/Simulation.dir/runner.cpp.s
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(MAKE) -f src/CMakeFiles/run.dir/build.make src/CMakeFiles/run.dir/runner.cpp.s
 .PHONY : runner.cpp.s
 
 # Help Target
@@ -258,13 +258,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... install/strip"
-	@echo "... Simulation"
+	@echo "... run"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -285,6 +285,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/darrkhan/Documents/Devs/C++/Project/PJ1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/darrkhan/Documents/Devs/C++/Project/ProjetCaP_Marliot_Paul/Marathon/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
